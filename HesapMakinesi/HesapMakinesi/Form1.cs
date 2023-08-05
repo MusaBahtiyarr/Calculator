@@ -27,6 +27,13 @@ namespace HesapMakinesi
 
         }
 
+        private void ekranLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
         private void rakam1Button_Click(object sender, EventArgs e)
         {
             if (_ekranTemizlenecekMi)
@@ -124,6 +131,17 @@ namespace HesapMakinesi
             }
             if (ekranLabel.Text == "0") ekranLabel.Text = "";
             ekranLabel.Text += "9";
+        }
+
+        private void rakam0Button_Click(object sender, EventArgs e)
+        {
+            if (_ekranTemizlenecekMi)
+            {
+                ekranLabel.Text = "";
+                _ekranTemizlenecekMi = false;
+            }
+            if (ekranLabel.Text == "0") ekranLabel.Text = "";
+            ekranLabel.Text += "0";
         }
 
         private void artiButton_Click(object sender, EventArgs e)
